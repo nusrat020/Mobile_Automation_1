@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group = 'webAutomation'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    implementation 'org.seleniumhq.selenium:selenium-java:4.25.0'
+
+    // https://mvnrepository.com/artifact/io.appium/java-client
+    implementation 'io.appium:java-client:9.3.0'
+
+    // https://mvnrepository.com/artifact/org.testng/testng
+    testImplementation 'org.testng:testng:7.10.1'
+
+    // https://mvnrepository.com/artifact/com.aventstack/extentreports
+    implementation 'com.aventstack:extentreports:5.1.1'
+
+}
+
+test {
+    useTestNG()
+}
